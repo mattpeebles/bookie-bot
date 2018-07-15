@@ -4,7 +4,7 @@ const {echo} = require('./twitch-commands')
 // Define configuration options: 
 let opts = {
   identity: {
-    username: 'Beryllirum',
+    username: 'Chaotic_Bookie',
     password: process.env.oauth
   },
   channels: [
