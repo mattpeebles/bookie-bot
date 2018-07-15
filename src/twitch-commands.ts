@@ -14,6 +14,4 @@ function echo (twitchHelper){
     }
 }
 
-module.exports = {
-    echo
-}
+export { echo };
