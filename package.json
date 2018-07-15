@@ -1,16 +1,20 @@
 {
   "name": "twitch-bot",
   "version": "1.0.0",
-  "description": "",
+  "description": "a simple fake currency betting bot for twitch.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Matt Peebles, peebles.mm@gmail.com",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^6.0.0",
-    "tmi.js": "^1.2.1"
+    "tmi.js": "^1.2.1",
+    "ejs": "latest",
+    "aws-sdk": "latest",
+    "body-parser": "latest",
+    "mysql": "latest"
   }
 }
