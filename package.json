@@ -17,10 +17,9 @@
     "ejs": "latest",
     "mysql": "latest",
     "tmi.js": "^1.2.1",
-    "typescript": "^2.9.2"
-  },
-  "devDependencies": {
+    "typescript": "^2.9.2",
     "@types/node": "^10.5.2",
     "@types/mysql": "github:types/mysql"
-  }
+  },
+  "devDependencies": {}
 }

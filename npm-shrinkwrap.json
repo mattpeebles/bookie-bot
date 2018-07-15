@@ -5,14 +5,12 @@
   "requires": true,
   "dependencies": {
     "@types/mysql": {
-      "version": "github:types/mysql#ce05b97be34596537384dae992d74d22daeac828",
-      "dev": true
+      "version": "github:types/mysql#ce05b97be34596537384dae992d74d22daeac828"
     },
     "@types/node": {
       "version": "10.5.2",
       "resolved": "https://registry.npmjs.org/@types/node/-/node-10.5.2.tgz",
-      "integrity": "sha512-m9zXmifkZsMHZBOyxZWilMwmTlpC8x5Ty360JKTiXvlXZfBWYpsg9ZZvP/Ye+iZUh+Q+MxDLjItVTWIsfwz+8Q==",
-      "dev": true
+      "integrity": "sha512-m9zXmifkZsMHZBOyxZWilMwmTlpC8x5Ty360JKTiXvlXZfBWYpsg9ZZvP/Ye+iZUh+Q+MxDLjItVTWIsfwz+8Q=="
     },
     "ansi-regex": {
       "version": "2.1.1",
