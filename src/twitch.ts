@@ -1,5 +1,5 @@
 const tmi = require('tmi.js')
-const {echo} = require('./twitch-commands')
+const {echo, register, inspect, unsubscribe} = require('./twitch-commands')
 
 // Define configuration options: 
 let opts = {
@@ -27,7 +27,10 @@ function sendMessage (target, context, message) {
 
 // These are the commands the bot knows (defined below):
 let knownCommands = { 
-  echo: echo(sendMessage) 
+  echo: echo(sendMessage),
+  register,
+  inspect,
+  unsubscribe
 }
 
 module.exports = {

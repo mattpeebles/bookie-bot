@@ -1,13 +1,13 @@
 declare namespace Bookie{
-    interface Entity{
+    interface Record{
         Id?: string;
         DateCreated?: Date;
         ModifiedOn?: Date;
     }
    
-    interface User extends Entity{
+    interface User extends Record{
         Name: string;
         DisplayName: string;
-        Banned: boolean;
+        IsBanned: boolean;
     }
 }

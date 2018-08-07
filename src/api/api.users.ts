@@ -1,14 +1,16 @@
 import * as dataService from '../database/db.api'
+import { EntityNames } from '../database/entities'
+
 
 function createUser(Id: string, Name: string, DisplayName: string){
     var entity : Bookie.User = {
         DisplayName,
         Id,
         Name,
-        Banned: false
+        IsBanned: false
     }
     
-    return dataService.createUser(Database.EntityNames.Users, entity);
+    return dataService.Create<Bookie.User>(EntityNames.Users, entity);
 }
 
 export { createUser };

@@ -1,5 +1,7 @@
-declare namespace Database{
-    enum EntityNames{
+export class BookieRecord{
+        Id: string;
+}
+
+export enum EntityNames{
         Users = "Users"
-    }
 }

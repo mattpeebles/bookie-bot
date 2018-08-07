@@ -1,35 +1,32 @@
-import {createConnection, QueryError, RowDataPacket} from 'mysql';
+import {createConnection, QueryError, RowDataPacket, createPool, Connection, format} from 'mysql';
 
-const connection  = createConnection({
+const pool  = createPool({
+    connectionLimit : 10,
     host     : process.env.RDS_HOSTNAME,
     user     : process.env.RDS_USERNAME,
     password : process.env.RDS_PASSWORD,
-    port     : parseInt(process.env.RDS_PORT)
+    port     : parseInt(process.env.RDS_PORT),
+    database : 'ebdb'
 });
 
 function load(){          
-    connection.connect(function(err) {
-      if (err) {
-        console.error('Database connection failed: ' + err.stack);
-        return;
-      }
-    
-      console.log('Connected to database.');
-    });
-    
-    connection.end(err => {
-        if(err){
-            console.error('Database connection failed to end: ' + err.stack);
-            connection.destroy();
+    pool.getConnection((err, connection) => {
+        if (err) {
+            console.error('Database connection failed: ' + err.stack);
             return;
         }
+        
+        console.log('Connected to database.');
+          
+        connection.release();
+    })
     
-        console.log("Connection to database ended")
-    });
+    
 }
 
 export {
-    connection,
-    load
+    pool,
+    load,
+    format
 }
 
